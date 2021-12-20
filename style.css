@@ -61,6 +61,7 @@
     color: white;
     flex-grow: 1;
     padding-bottom: 150px;
+    text-align: center;
 }
 
 .arrow {
@@ -70,7 +71,7 @@
 .section1 {
     /* overflow: hidden; */
     display: flex;
-    height: 350px;
+    height: auto;
 }
 
 .section1 img {
@@ -92,7 +93,7 @@
 .section2 {
     display: flex;
     flex-direction: row-reverse;
-    height: 350px;
+    height: auto;
 }
 
 .section2 img {
@@ -147,8 +148,62 @@
 
 .section3 {
     display: flex;
-    height: 350px;
+    height: auto;
     position: relative;
+}
+
+.section3 .left {
+    background-image: url("./assets/desktop/image-graphic-design.jpg");
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-top: 50px;
+}
+
+.section3 .right {
+    background-image: url("./assets/desktop/image-photography.jpg");
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.section3 .left h1 {
+    color: #24554A;
+    /* font-size: 18px; */
+    padding-top: 40%;
+}
+
+.section3 .left p {
+    text-align: center;
+    color: #589688;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 60%;
+    padding-bottom: 5%;
+}
+
+.section3 .right h1 {
+    color: #145578;
+    font-size: 2.5em;
+    margin-bottom: 16px;
+    padding-top: 50%;
+}
+
+.section3 .right p {
+    text-align: center;
+    color: #145578;
+    font-size: 14px;
+    width: 60%;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 16px;
+    padding-bottom: 5%;
 }
 
 
@@ -274,4 +329,45 @@
 .footer .social-media span {
     padding: 8px;
     cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+    .section1 {
+        flex-direction: column-reverse;
+    }
+    .section1 .left {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section2 {
+        flex-direction: column-reverse;
+    }
+    .section2 .left {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text-container {
+        text-align: center;
+    }
+    .section3 {
+        flex-direction: column;
+    }
+    .section3 img {
+        object-fit: cover;
+    }
+    .section5 {
+        flex-wrap: wrap;
+    }
+    .section5 .image {
+        flex: 0.5;
+        flex-basis: 50%;
+    }
+    .clients {
+        flex-direction: column;
+    }
 }
